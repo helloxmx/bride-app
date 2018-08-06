@@ -1,0 +1,33 @@
+html{
+    font-size: 10px;
+}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
+
+//去掉ios/android点击链接时半透明灰色遮罩或者边框
+a,button,input,textarea{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only; 
+}
+//伪类元素改变input number类型默认样式
+input[type=number]::-webkit-textfield-decoration-container {
+    background-color: transparent;    
+}
+input[type=number]::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+}
+input[type=number]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+}
+//改变placeholder颜色
+input::-webkit-input-placeholder{
+    color:#AAAAAA;
+}
+input:focus::-webkit-input-placeholder{
+    color:#EEEEEE;
+}
